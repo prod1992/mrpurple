@@ -1,0 +1,132 @@
+        /* Large Devices, Wide Screens */
+        
+        @media only screen and (max-width: 1200px) {
+            .home-slider .slide {
+                min-height: 600px;
+            }
+            .page-content .gallery .gallery-slider .gal-slide img {
+                height: 600px;
+            }
+        }
+        /* Medium Devices, Desktops */
+        
+        @media only screen and (max-width: 992px) {
+            .book-table-container {
+                padding: 0 120px;
+            }
+            .page-content .menus .container .box-center.big-box .col-md-6 {
+                margin-left: 0%;
+                width: 100%;
+            }
+            .page-content .menus .container .box-center.right, .page-content .menus .container .box-center.left {
+                max-width: initial;
+            }
+            .page-content .menus .container .box-center.right.lower {
+                margin-top: 0;
+            }
+            .page-content .menus .container .box-center.big-box .col-md-6.has-border {
+                width: 100%;
+                border: none;
+            }
+            .page-content .gallery .gallery-slider .gal-slide img {
+                height: 400px;
+            }
+            .press img {
+                width: 100%;
+            }
+        }
+        /* Small Devices, Tablets */
+        
+        @media only screen and (max-width: 769px) {
+            .page-content {
+                padding-top: 96px;
+            }
+            header {
+                padding: 37px 0 37px;
+            }
+            header .book-btn {
+                display: none;
+            }
+            header .page-title {
+                display: none;
+            }
+            .container, .page-content .menus .container,.page-content .events .events-content .container {
+                padding: 0px 44px;
+            }
+            nav {
+                padding-top: 150px;
+            }
+            nav ul li a {
+                font-size: 25px;
+                letter-spacing: 0.1em;
+            }
+            .page-content .menus .container .box-center.big-box {
+                padding: 50px 35px;
+            }
+            .home-slider .slide {
+                min-height: 474px;
+            }
+            .home-slider .slick-prev {
+                left: 30px;
+            }
+            .home-slider .slick-next {
+                right: 30px;
+            }
+            .about-content p {
+                font-size: 24px;
+            }
+            .about-content .couples p {
+                 font-size: 20px;
+            }
+            footer .contacts {
+                float: none;
+
+            }
+
+            footer .gerber-logo {
+                float: none;
+                margin-top: 30px;
+                
+            }
+            .loader {
+                padding-top: 200px;
+            }
+            .loader a {
+                font-size: 25px;
+            }
+        }
+        /* Extra Small Devices, Phones */
+        
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 0px 15px;
+            }
+            .about-content .couples p {
+                font-size: 16px;
+            }
+            .about-content p {
+                font-size: 20px;
+            }
+            .container, .page-content .menus .container, .page-content .events .events-content .container {
+                padding: 0px 15px;
+            }
+        }
+        /* Custom, iPhone Retina */
+        
+        @media only screen and (max-width: 320px) {}
+        /*==========  Mobile First Method  ==========*/
+        /* Custom, iPhone Retina */
+        
+        @media only screen and (min-width: 320px) {}
+        /* Extra Small Devices, Phones */
+        
+        @media only screen and (min-width: 480px) {}
+        /* Small Devices, Tablets */
+        
+        @media only screen and (min-width: 769px) {}
+        /* Medium Devices, Desktops */
+        
+        @media only screen and (min-width: 992px) {}
+        /* Large Devices, Wide Screens */
+        
+        @media only screen and (min-width: 1200px) {}

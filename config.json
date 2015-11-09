@@ -1,0 +1,16 @@
+{
+    "theme": {
+        "name": "Mr Purple",
+        "author": "Levon",
+    },
+    "navs": [
+      {
+        "name": "Main Navigation",
+        "slug": "main"
+      },
+      {
+        "name": "Footer",
+        "slug": "footer"
+      }
+    ]
+}

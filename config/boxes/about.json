@@ -1,0 +1,4 @@
+{
+    name:"About Couple",
+    fields: {content:"wysiwyg", featured_image: "image" },
+}

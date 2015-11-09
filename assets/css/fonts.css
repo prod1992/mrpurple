@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'DINCondensed-Bold';
+    src: url('../fonts/DINCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'BellGothicBT-Roman';
+    src: url('../fonts/BellGothicBT-Roman.ttf');
+}
+
+@font-face {
+    font-family: 'BellGothicBT-Bold';
+    src: url('../fonts/BellGothicBT-Bold.ttf');
+}

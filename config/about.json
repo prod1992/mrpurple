@@ -1,0 +1,21 @@
+{
+    "name": "About",
+    "fields": {
+        "heading": {
+            "title": "Top Image & Description",
+            "type": "section",
+            "items": {
+                "featuredimage":"image",
+                "description": "wysiwyg"
+            },
+        }
+    },
+    "wireframe": [
+        "section-heading",
+        {
+            "boxes-about": {
+                "width": "columns-6"
+            }
+        }
+    ]
+}

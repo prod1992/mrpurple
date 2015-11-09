@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="events">
+        <div class="banner">
+            <img class="img-responsive" src="{{ static('images/events-bg_02.jpg') }}">
+        </div>
+        <div class="events-content">
+            <div class="container">
+                <h2>Inquire below for private events, hosting and catering.</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>DATE</label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>NUMBER OF GUESTS</label>
+                                <input class="form-control small" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>EMAIL</label>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>TYPE OF EVENT</label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>FULL NAME</label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>PHONE</label>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">SEND</button>
+                    <a class="purple" href="#">Download additional information ></a>
+                </form>
+                <div class="this-bg">
+                    <img class="rounds rounds1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+                   <img class="cross cross1" src="{{ static('images/menu-bg-item_13.png') }}" data-speed="2" />
+                    <img class="boots" src="{{ static('images/menu-bg-item_46.png') }}" data-speed="2" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

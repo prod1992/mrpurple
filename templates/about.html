@@ -7,27 +7,34 @@
         <div class="about-content">
             <div class="container">
                {{ current.fields.heading.description }}
+
+
+
+               {% for couple in boxes.about.all %}
+                {% if loop.index % 2 %} 
                 <div class="row couples">
                     <div class="col-md-6">
-                        <p>
-                            Mr. Purple, a rooftop bar and restaurant located on the 15th floor of Hotel Indigo Lower East Side, captures the vibrant and artistic spirit of the LES. Designed by internationally acclaimed design firm Crème Design, the space recreates an artist-loft ambiance with indoor and outdoor areas displayed through the use of reclaimed wood structures, juxtaposed with concrete, metal, free hanging lights, and contemporary wooden furniture. Using downtown New York as a backdrop, the 3,000 sq. ft. interior space is complemented by two terraces. The smaller 750 sq. ft. eastern terrace is perfect for an intimate gathering. The larger terrace located on the west side of the space measures 5,000 sq. ft., and is outfitted with its own swimming pool, bar and variety of seating options including chaise lounges, banquettes, and high top communal tables. Seating at the center of the terrace is defined by posts draped with a flowing canopy, providing shade for guests during daylight and transforming to a nighttime playground with festoon lighting by dusk. Mr. Purple’s menu connects with local iconic culinary staples such as Russ & Daughters, Melt Bakery, Il Laboratorio del Gelato and Beecher’s Handmade Cheese. The cocktail, beer and wine menu features an expansive collection of small-batch spirits, regionally brewed craft beers, universal wine offerings and a rotating selection of Gerber Group’s classic and modern cocktails that highlight market fresh ingredients.
-                        </p>
+                        <p>{{ couple.fields.content }}</p>
                     </div>
+
                     <div class="col-md-6">
-                        <div class="line"></div>
-                        <img class="img-responsive" src="{{ static('images/about-img-1.jpg') }}" />
+                        <img class="img-responsive" src="{{ couple.fields.featured_image }}" />
                     </div>
                 </div>
-                <div class="row couples">
+                     
+                {% else %} 
+                    <div class="row couples">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="{{ static('images/about-img-2.jpg') }}" />
+                        <img class="img-responsive" src="{{ couple.fields.featured_image }}" />
                     </div>
+
                     <div class="col-md-6">
-                        <p>
-                            Hospitality industry leader, Gerber Group, encompasses 17 venues under such brands as Whiskey Blue, Whiskey Park, Irvington, Kingside, The Roof and Mr. Purple. Setting out to provide an innovative nightlife experience, Gerber Group opened its first property, The Whiskey at the Paramount Hotel, in 1991. Today, Principal & CEO Scott Gerber manages the company and its full portfolio of properties and continues to re-define the hospitality industry with innovative dining concepts and bars featuring renowned beverage programs accompanied by exceptional culinary talents. The extraordinary success of Gerber Group’s brands has established the company as a pre-eminent tastemaker, with a unique ability to create classically timeless bars with a sophisticated allure, as well as destination-worthy restaurants. Gerber Group’s vision continues to expand with bars and restaurants around the country as a preferred partner to Starwood Hotels & Resorts, Host Hotels & Resorts, Noble Investment Group, Viceroy Hotels and Resorts, InterContinental Hotels Group and American Realty Capital.
-                        </p>
+                        <p>{{ couple.fields.content }}</p>
+                        
                     </div>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

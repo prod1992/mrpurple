@@ -301,6 +301,7 @@ $(document).ready(function() {
 
     $('nav ul li a').on('click', function(e) {
         e.preventDefault();
+
         if (!$(this).parent().hasClass('book-table-mob')) {
 
             $('.loader').addClass('active');
@@ -327,6 +328,10 @@ $(document).ready(function() {
             var thisText = $(this).text();
             window.history.replaceState('Object', 'Title', '/'+thisText);
             $('.page-content').fadeOut(1000, function() {
+
+                if ($('.book-table-container .book-a-table').is(':visible')) {
+                    $('.book-a-table').slideToggle();
+                }
 
                 setTimeout(function() {
                     $('.loader').removeClass('active');

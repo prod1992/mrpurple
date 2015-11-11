@@ -33,11 +33,16 @@ html {
 }
 
 body {
-    font-family: HelveticaNeueW01-55Roma;
+    font-family: HelveticaNeueW01-Thin;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto!important;
     transition: .5s all
+}
+
+.container-big {
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .loader {
@@ -47,9 +52,9 @@ body {
     background: #fff;
     top: 0;
     z-index: 20;
-    padding-top: 400px;
+    padding-top: 360px;
     opacity: 0;
-    transition: 1.2s opacity;
+    transition: 0.5s opacity;
     pointer-events: none
 }
 
@@ -188,7 +193,7 @@ header .book-btn:hover {
 
 header .page-title {
     color: #8d5ef9;
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     font-size: 16px;
     text-transform: uppercase;
     display: block;
@@ -317,7 +322,7 @@ header .menu-toggle span:last-child {
 
 .book-table-container .book-a-table form label {
     text-transform: uppercase;
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     margin-bottom: 10px
 }
 
@@ -331,7 +336,7 @@ header .menu-toggle span:last-child {
 }
 
 .book-table-container .book-a-table form h3 {
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     color: #000;
     font-size: 14px;
     margin-top: 37px
@@ -349,7 +354,7 @@ header .menu-toggle span:last-child {
 
 .book-table-container .book-a-table form span {
     font-size: 12px;
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     font-style: italic
 }
 
@@ -420,7 +425,7 @@ footer .contacts {
 }
 
 footer .contacts a {
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     text-transform: uppercase;
     color: #000;
     font-size: 13px;
@@ -430,7 +435,7 @@ footer .contacts a {
 
 footer .contacts h4 {
     font-size: 13px;
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 2;
@@ -715,13 +720,15 @@ footer .gerber-logo {
 }
 
 .page-content .menus .container .box-center span.origin {
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     font-size: 13px;
     text-transform: none
 }
 
 .page-content .menus .container .box-center span.dollar {
-    font-size: 28px
+    font-size: 28px;
+    margin-top: 15px;
+    display: block;
 }
 
 .page-content .menus .container .box-center h1 {
@@ -742,11 +749,12 @@ footer .gerber-logo {
 }
 
 .page-content .menus .container .box-center h3 {
-    font-family: Helvetica
+    font-family: HelveticaNeueW01-Thin;
+    margin-top: 20px;
 }
 
 .page-content .menus .container .box-center .item {
-    margin-top: 20px
+    
 }
 
 .page-content .about .banner img {
@@ -889,7 +897,7 @@ footer .gerber-logo {
 }
 
 .page-content .press p {
-    font-family: Helvetica;
+    font-family: HelveticaNeueW01-Thin;
     font-size: 16px;
     margin: 16px 0 62px;
     color: #000;

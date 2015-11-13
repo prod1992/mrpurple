@@ -5,8 +5,8 @@
             <div class="row">
                 {% for item in boxes.press.all %}
                     <div class="col-md-4">
-                        <a href="{% if item.file and not item.external_url %}{{ item.file }} {% else %} {{ item.external_url }} {% endif %}">
-                            <img class="img-responsive" src="{{ item.image }}" alt="{{ item.name }}" target="_blank"/>
+                        <a href="{% if item.file and not item.external_url %}{{ item.file }} {% else %} {{ item.external_url }} {% endif %}" target="_blank">
+                            <img class="img-responsive" src="{{ item.image }}" alt="{{ item.name }}" />
                         </a>
                         
                         <h3>{{item.source}}</h3>

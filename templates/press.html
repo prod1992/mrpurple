@@ -4,15 +4,21 @@
         <div class="container">
             <div class="row">
                 {% for item in boxes.press.all %}
-                <div class="col-md-4">
-                    <img class="img-responsive" src="{{ item.image }}" />
-                    <h3>{{item.source}}</h3>
-                    <p>{{item.title}}</p>
-                </div>
+                    <div class="col-md-4">
+                        <a href="{% if item.file and not item.external_url %}{{ item.file }} {% else %} {{ item.external_url }} {% endif %}">
+                            <img class="img-responsive" src="{{ item.image }}" alt="{{ item.name }}" target="_blank"/>
+                        </a>
+                        
+                        <h3>{{item.source}}</h3>
+                        <p>{{item.title}}</p>
+                    </div>
+                    {% if loop.index is divisibleby 3 %}
+                    </div>
+                    <div class="row">
+                    {% endif %}
                 {% endfor %}
             </div>
-
+​
         </div>
     </div>
-
 {% endblock %}

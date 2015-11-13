@@ -5,7 +5,7 @@
 
 
         {% for image in boxes.gallery.by_slug['home-page-gallery'].images %}
-             <div class="slide" style="background: url({{ image }}) center;
+             <div class="slide" style="background: url('{{ image }}') center;
     background-size: cover;">
             </div>
         {% endfor %}

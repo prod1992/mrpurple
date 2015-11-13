@@ -1,0 +1,4 @@
+{
+    name:"Book A Table",
+    fields: {content:"wysiwyg"},
+}

@@ -4,13 +4,17 @@
         <div class="container">
             <div class="row">
                 {% for item in boxes.press.all %}
-                    <div class="col-md-4">
-                        <a href="{% if item.file and not item.external_url %}{{ item.file }} {% else %} {{ item.external_url }} {% endif %}" target="_blank">
-                            <img class="img-responsive" src="{{ item.image }}" alt="{{ item.name }}" />
-                        </a>
+                    <div class="col-md-4 one-slot {% if loop.index > loop.length - 3 %} last-3{% endif %}">
+                        <div class="press-image">
+                            <a href="{% if item.file and not item.external_url %}{{ item.file }} {% else %} {{ item.external_url }} {% endif %}" target="_blank">
+                                <img class="img-responsive" src="{{ item.image|resize(256, 286) }}" alt="{{ item.name }}" />
+                            </a>
+                        </div>
+                        <div class="this-caption">
+                            <a href="{{ item.external_url }}">{{item.title}}</a>
+                            <p>{{ item.source }}</p>
+                        </div>
                         
-                        <h3>{{item.source}}</h3>
-                        <p>{{item.title}}</p>
                     </div>
                     {% if loop.index is divisibleby 3 %}
                     </div>

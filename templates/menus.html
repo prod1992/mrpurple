@@ -1,132 +1,66 @@
 {% extends 'base.html' %}
+
 {% block content %}
-        <div class="menus">
-            <div class="container">
-                <div class="box-center first-one  big-box">
-                    <h1>{{ boxes.menus.by_slug['all-day'].name }}</h1>
-                    <div class="row margin0">
-                       
-                        
-
-                        <div class="col-md-6 padding0">
-                            {{ boxes.menus.by_slug['all-day'].sections[0].description }}
-                            
-                            
-                        </div>
-                        <div class="col-md-6 padding0">
-
-                         
-                            {{ boxes.menus.by_slug['all-day'].sections[1].description }}
-                        </div>
-                    </div>
+<div class="menus">
+    <div class="container">
+    {% for menu in boxes.menus.all %}
+        <div class="box-center {% if loop.first %}first-one{% endif %}  big-box">
+            <h1>{{ menu.name }}</h1>
+            <div class="row margin0">
+            {% if menu.sections|length > 1 %}
+                <div class="col-md-6 padding0">
+                    {{ menu.sections[0].description }}
                 </div>
-                <div class="box-center right">
-
-                    <h1>{{ boxes.menus.by_slug['coffee-juice'].name }}</h1>
-                    {{ boxes.menus.by_slug['coffee-juice'].description }}
+                <div class="col-md-6 padding0">
+                    {{ menu.sections[1].description }}
                 </div>
-                <div class="box-center big-box">
-                    <h1>{{ boxes.menus.by_slug['brunch'].name }}</h1>
-                    <div class="row margin0">
-                        <div class="col-md-6 padding0">
-                           
-                            {{ boxes.menus.by_slug['brunch'].sections[0].description }}
-                        </div>
-                        <div class="col-md-6 padding0">
-                            
-                            {{ boxes.menus.by_slug['brunch'].sections[1].description }}
-                        </div>
-                    </div>
-                </div>
-                <div class="box-center left">
-                    <h1>{{ boxes.menus.by_slug['cocktails'].name }}</h1>
-                   
-                    {{ boxes.menus.by_slug['cocktails'].description }}
-                </div>
-                <div class="box-center right">
-                    <h1>{{ boxes.menus.by_slug['desert'].name }}</h1>
-                    
-                    {{ boxes.menus.by_slug['desert'].description }}
-                </div>
-                <div class="box-center right lower">
-                    <h1>{{ boxes.menus.by_slug['beer'].name }}</h1>
-                   
-                    {{ boxes.menus.by_slug['beer'].description }}
-                </div>
-                <div class="box-center left">
-                    <h1>{{ boxes.menus.by_slug['cocktails'].name }}</h1>
-                    
-                    {{ boxes.menus.by_slug['cocktails'].description }}
-                </div>
-                <div class="box-center big-box">
-                    <div class="row margin0">
-                        <div class="col-md-6 padding0 has-border">
-                            <h1>{{ boxes.menus.by_slug['white'].name }}</h1>
-                            
-                            {{ boxes.menus.by_slug['white'].description }}
-                        </div>
-                        <div class="col-md-6 padding0">
-                            <h1>{{ boxes.menus.by_slug['red'].name }}</h1>
-                          
-                            {{ boxes.menus.by_slug['red'].description }}
-                        </div>
-                    </div>
-                </div>
-                <div class="this-bg">
-                    <img class="rounds rounds1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
-                    <img class="rounds rounds2" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
-                   <img class="rounds rounds3" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="rounds rounds4" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
-                    <img class="rounds rounds5" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
-                    <img class="rounds rounds6" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="5" />
-                    <img class="rounds rounds7" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="rounds rounds8" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
-                    <img class="rounds rounds9" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="rounds rounds10" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="rounds rounds11" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
-                    <img class="cross cross1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="cross cross2" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
-                    <img class="cross cross3" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="cross cross4" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
-                    <img class="cross cross5" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
-                    <img class="cross cross6" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
-                    <img class="cross cross7" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="cross cross8" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="cross cross9" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
-                    <img class="cross cross10" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
-                    <img class="cross cross11" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
-                    <img class="head" src="{{ static('images/menu-bg-item_03.png') }}" data-speed="2" />
-                    <img class="head head2" src="{{ static('images/menu-bg-item21.png') }}" data-speed="1" />
-                    <img class="head head3" src="{{ static('images/menu-bg-item_033.png') }}" data-speed="3" />
-                    <img class="kost" src="{{ static('images/menu-bg-item_11.png') }}" data-speed="2" />
-                    <img class="kost kost2" src="{{ static('images/menu-bg-item_003_03.png') }}" data-speed="1" />
-
-                    <img class="hands" src="{{ static('images/menu-bg-item_1.png') }}" data-speed="4" />
-
-                    <img class="hands hands2" src="{{ static('images/hands1.png') }}" data-speed="3" />
-
-                    <img class="hands-second" src="{{ static('images/menu-bg-item_42.png') }}" data-speed="5" />
-                    
-                    <img class="hands-second hands-second2" src="{{ static('images/hands2.png') }}" data-speed="1" />
-                    <img class="xzbz" src="{{ static('images/menu-bg-item_22.png') }}" data-speed="4" />
-
-                    <img class="xzbz xzbz2" src="{{ static('images/menu-bg-item_22.png') }}" data-speed="2" />
-
-                     <img class="pants" src="{{ static('images/menu-bg-item_26.png') }}" data-speed="4" />
-
-                     <img class="xzbz-big" src="{{ static('images/menu-bg-item_29.png') }}" data-speed="5" />
-                      <img class="xzbz-big xzbz-big2" src="{{ static('images/menu-bg-item_29.png') }}" data-speed="1" />
-                      <img class="boots" src="{{ static('images/menu-bg-item_46.png') }}" data-speed="3" />
-
-                      <img class="boots-purple" src="{{ static('images/menu-bg-item_34.png') }}" data-speed="2" />
-
-        
-        
-                  
-                    
-                    
-
-                </div>
+            {% else %}
+                {{ menu.description }}
+                {{ menu.sections[0].description }}
+            {% endif %}
             </div>
         </div>
+    {% endfor %}
+        <div class="this-bg">
+            <img class="rounds rounds1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
+            <img class="rounds rounds2" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+            <img class="rounds rounds3" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="rounds rounds4" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+            <img class="rounds rounds5" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
+            <img class="rounds rounds6" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="5" />
+            <img class="rounds rounds7" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="rounds rounds8" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
+            <img class="rounds rounds9" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="rounds rounds10" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="rounds rounds11" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
+            <img class="cross cross1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="cross cross2" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+            <img class="cross cross3" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="cross cross4" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
+            <img class="cross cross5" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+            <img class="cross cross6" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="4" />
+            <img class="cross cross7" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="cross cross8" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="cross cross9" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="2" />
+            <img class="cross cross10" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
+            <img class="cross cross11" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="1" />
+            <img class="head" src="{{ static('images/menu-bg-item_03.png') }}" data-speed="2" />
+            <img class="head head2" src="{{ static('images/menu-bg-item21.png') }}" data-speed="1" />
+            <img class="head head3" src="{{ static('images/menu-bg-item_033.png') }}" data-speed="3" />
+            <img class="kost" src="{{ static('images/menu-bg-item_11.png') }}" data-speed="2" />
+            <img class="kost kost2" src="{{ static('images/menu-bg-item_003_03.png') }}" data-speed="1" />
+            <img class="hands" src="{{ static('images/menu-bg-item_1.png') }}" data-speed="4" />
+            <img class="hands hands2" src="{{ static('images/hands1.png') }}" data-speed="3" />
+            <img class="hands-second" src="{{ static('images/menu-bg-item_42.png') }}" data-speed="5" />
+            <img class="hands-second hands-second2" src="{{ static('images/hands2.png') }}" data-speed="1" />
+            <img class="xzbz" src="{{ static('images/menu-bg-item_22.png') }}" data-speed="4" />
+            <img class="xzbz xzbz2" src="{{ static('images/menu-bg-item_22.png') }}" data-speed="2" />
+            <img class="pants" src="{{ static('images/menu-bg-item_26.png') }}" data-speed="4" />
+            <img class="xzbz-big" src="{{ static('images/menu-bg-item_29.png') }}" data-speed="5" />
+            <img class="xzbz-big xzbz-big2" src="{{ static('images/menu-bg-item_29.png') }}" data-speed="1" />
+            <img class="boots" src="{{ static('images/menu-bg-item_46.png') }}" data-speed="3" />
+            <img class="boots-purple" src="{{ static('images/menu-bg-item_34.png') }}" data-speed="2" />
+        </div>
+    </div>
+</div>
 {% endblock %}

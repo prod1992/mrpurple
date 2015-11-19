@@ -40,6 +40,7 @@ body {
     transition: .5s all
 }
 
+
 .container-big {
     max-width: 90%;
     margin: 0 auto;
@@ -150,7 +151,7 @@ h3 {
 }
 
 header {
-    padding: 50px 0 43px;
+    padding: 12px 0;
     background-color: #fff;
     position: fixed;
     left: 0;
@@ -274,7 +275,7 @@ header .menu-toggle span:last-child {
 .book-table-container .book-a-table .this-bg {
     opacity: 0;
     position: absolute;
-    z-index: 0;
+    z-index: -100;
     width: 100%;
     height: 100%;
     top: 35px;
@@ -295,7 +296,7 @@ header .menu-toggle span:last-child {
 }
 
 .book-table-container .book-a-table .this-bg img.rounds1 {
-    margin: 422px 0 0 280px
+    margin: 331px 0 0 200px;
 }
 
 .book-table-container .book-a-table .this-bg img.xzbz {
@@ -307,7 +308,7 @@ header .menu-toggle span:last-child {
 }
 
 .book-table-container .book-a-table h2 {
-    font-family: HelveticaNeueW01-45Ligh;
+    font-family: HelveticaNeueW01-Thin;
     font-size: 22px;
     color: #000;
     text-align: left;
@@ -323,7 +324,8 @@ header .menu-toggle span:last-child {
 .book-table-container .book-a-table form label {
     text-transform: uppercase;
     font-family: HelveticaNeueW01-Thin;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
 }
 
 .book-table-container .book-a-table form input.form-control {
@@ -369,11 +371,12 @@ header .menu-toggle span:last-child {
 }
 
 .home-slider {
-    position: relative
+    position: relative;
 }
 
 .home-slider .slide {
-    min-height: 800px;
+    height: 650px;
+    margin: 0 10px;
     transition: .9s transform;
     -webkit-transition: .9s transform;
     -moz-transition: .9s transform;
@@ -413,8 +416,40 @@ header .menu-toggle span:last-child {
     outline: 0
 }
 
+.gallery-slider .slide {
+    height: 650px;
+}
+
+.gallery-slider .slick-prev {
+    display: block;
+    border: none;
+    width: 14px;
+    height: 24px;
+    position: absolute;
+    background: url(../images/home-slider-arrow-left.png) no-repeat;
+    left: 70px;
+    top: 45.2%;
+    z-index: 10;
+    text-indent: -9999px;
+    outline: 0
+}
+
+.gallery-slider .slick-next {
+    display: block;
+    border: none;
+    width: 14px;
+    height: 24px;
+    position: absolute;
+    background: url(../images/home-slider-arrow-right.png) no-repeat;
+    right: 70px;
+    top: 45.2%;
+    z-index: 10;
+    text-indent: -9999px;
+    outline: 0
+}
+
 footer {
-    padding: 47px 0 52px;
+    padding: 25px 0 28px;
     background-color: #eee;
     position: relative;
     z-index: 16
@@ -434,6 +469,7 @@ footer .contacts a {
 }
 
 footer .contacts h4 {
+    display: inline-block;
     font-size: 13px;
     font-family: HelveticaNeueW01-Thin;
     text-transform: uppercase;
@@ -442,16 +478,12 @@ footer .contacts h4 {
     color: #000
 }
 
-footer .contacts h4:nth-of-type(1) {
-    margin-top: 23px
-}
-
 footer .gerber-logo {
     float: right
 }
 
 .about-content {
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: 70px
 }
 
@@ -471,8 +503,9 @@ footer .gerber-logo {
     color: #8d5ef9
 }
 
-.about-content .couples {
-    margin-top: 70px
+.about-content .couples:not(:first-child) {
+    margin-top: 80px;
+    
 }
 
 .about-content .couples img {
@@ -481,11 +514,11 @@ footer .gerber-logo {
 
 .about-content .couples p {
     font-size: 16px;
-    font-family: Helvetica
+   font-family: HelveticaNeueW01-Thin;
 }
 
 .page-content {
-    padding-top: 115px;
+    padding-top: 60px;
     transition: .9s all;
     -webkit-transition: .9s all;
     -moz-transition: .9s all;
@@ -682,7 +715,7 @@ footer .gerber-logo {
 .page-content .menus .container .box-center.big-box .col-md-6 {
     width: 45%;
     margin-left: 5%;
-    padding-right: 50px
+    padding-right: 0px
 }
 
 .page-content .menus .container .box-center.big-box .col-md-6:first-child {
@@ -752,7 +785,7 @@ footer .gerber-logo {
 }
 
 .page-content .menus .container .box-center .item {
-    
+
 }
 
 .page-content .about .banner img {
@@ -797,7 +830,7 @@ footer .gerber-logo {
 
 .page-content .gallery .gallery-slider .gal-slide img {
     max-width: auto;
-    height: 750px;
+    height: 650px;
 }
 
 .page-content .events .banner img {
@@ -823,7 +856,7 @@ footer .gerber-logo {
 
 .page-content .events .events-content form label {
     text-transform: uppercase;
-     
+
     margin-bottom: 10px
 }
 
@@ -848,7 +881,7 @@ footer .gerber-logo {
     display: block;
     color: #8d5ef9;
     font-size: 14px;
-   
+
     margin-top: 35px;
     letter-spacing: 1px;
         text-transform: uppercase;
@@ -896,7 +929,87 @@ footer .gerber-logo {
 .page-content .press p {
     font-family: HelveticaNeueW01-Thin;
     font-size: 16px;
-    margin: 16px 0 62px;
+    
     color: #000;
     letter-spacing: 1px
+}
+
+div.success, div.error {
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+div.press-image {
+    min-height: 286px;
+}
+
+.press .this-caption {
+    position: absolute;
+    padding: 20px;
+    top: 30%;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.press .this-caption a {
+    color: #000;    
+    text-decoration: none;
+    font-weight: bold;  
+    font-size: 13px;
+    letter-spacing: 1px;
+
+}
+
+.press .this-caption a:hover {
+    text-decoration: none;
+}
+
+.press .this-caption p {
+    font-family: HelveticaNeueW01-45Ligh;
+    text-transform: uppercase;
+    font-size: 13px;
+   letter-spacing: 1px;
+}
+
+.one-slot {
+    
+    border-bottom: none;
+    position: relative;
+}
+.one-slot img {
+    width: 290px;
+    height: 320px;
+}
+.one-slot.last-3 {
+   
+}
+
+.one-slot:nth-child(3n+1) {
+    margin-bottom: 40px;
+} 
+
+/*.one-slot:nth-last-child(-n+3) {
+    border-bottom: 1px solid #000;
+} */
+
+
+.banner.background-image {
+    background-size: cover;
+    height: 650px;
+}
+
+div.mobile-banner {
+    display:none;
+}
+
+div.mobile-banner img {
+    width: 100%;
+}
+
+#page-reservation-request {
+    margin: 0 auto;
+    max-width: 465px;
 }

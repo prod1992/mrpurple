@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="about">
-        <div class="banner">
-            <img class="img-responsive" src="{{ current.fields.heading.featuredimage }}" />
+        <div class="banner background-image" style="background-image: url('{{ current.fields.heading.featuredimage }}'); ">
+        </div>
+        <div class="mobile-banner">
+            <img src="{{ current.fields.heading.featuredimage }}" />
         </div>
         <div class="about-content">
             <div class="container">
                {{ current.fields.heading.description }}
 
-
-
                {% for couple in boxes.about.all %}
-                {% if loop.index % 2 %} 
+                {% if loop.index % 2 %}
                 <div class="row couples">
                     <div class="col-md-6">
                         <p>{{ couple.fields.content }}</p>
@@ -21,8 +21,8 @@
                         <img class="img-responsive" src="{{ couple.fields.featured_image }}" />
                     </div>
                 </div>
-                     
-                {% else %} 
+
+                {% else %}
                     <div class="row couples">
                     <div class="col-md-6">
                         <img class="img-responsive" src="{{ couple.fields.featured_image }}" />
@@ -30,7 +30,7 @@
 
                     <div class="col-md-6">
                         <p>{{ couple.fields.content }}</p>
-                        
+
                     </div>
                 </div>
                 {% endif %}

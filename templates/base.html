@@ -39,42 +39,7 @@
         <div class="container book-table-container">
             <div class="book-a-table">
                 {{ boxes.book.all[0].fields.content }}
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>*FIRST NAME</label>
-                                <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>*EMAIL</label>
-                                <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>*DATE</label>
-                                <input class="form-control" type="text">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>*LAST NAME</label>
-                                <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>*PHONE</label>
-                                <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>*PARTY SIZE</label>
-                                <input class="form-control small" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <h3>ADDITIONAL INFORMATION</h3>
-                    <textarea></textarea>
-                    <span>* REQUIRED</span>
-                    <button type="submit">MAKE REQUEST</button>
-                </form>
+                <iframe src="https://www.sevenrooms.com/direct/reservation-request/mrpurplenyc/table" height="470" width="100%" frameborder="0"></iframe>
                 <div class="this-bg">
                     <img class="rounds rounds1" src="{{ static('images/menu-bg-item_06.png') }}" data-speed="3" />
                     <img class="cross cross1" src="{{ static('images/menu-bg-item_13.png') }}" data-speed="6" />
@@ -105,22 +70,21 @@
     <footer>
         <div class="container-big clearfix">
             <div class="contacts">
-                <a class="address" href="#">
-                    hotel indigo lower east side <br>  
-                    180 Orchard Street, 15th floor, NY, NY 10002
+                <a class="address" target="_blank" href="http://maps.google.com/?q={{ boxes.locations.by_slug['main-location'].address }}">
+                    {{ boxes.locations.by_slug['main-location'].name }} |
+                    {{ boxes.locations.by_slug['main-location'].address }}
                 </a>
                 <br>
-                <a class="phone" href="#">212.237.1790</a> | <a href="#">info@mrpurlenyc.com</a>
-                <br> <a class="fb" href="#">facebook</a> | <a href="#" class="insta">
-                instagram </a>
-                <h4>monday - friday: 12PM - 4AM</h4>
-                <h4>Saturday & Sunday: 10pm – 4am</h4>
+                <a class="phone" href="tel:{{ boxes.locations.by_slug['main-location'].phone_number }}">{{ boxes.locations.by_slug['main-location'].phone_number }}</a> | <a href="#">info@mrpurlenyc.com</a> |
+                 <a class="fb" target="_blank" href="{{ account.services.facebook.url }}">facebook</a> | <a href="{{ account.services.instagram.url }}" target="_blank" class="insta">
+                instagram </a><br>
+                {{ boxes.locations.by_slug['main-location'].hours}}
             </div>
             <div class="gerber-logo">
                 <a href="http://Gerberbars.com" target="_blank">
                      <img src="{{ static('images/footer-gerber-logo_03.png') }}" alt="Gerber Group">
                 </a>
-               
+
             </div>
         </div>
     </footer>
@@ -142,6 +106,10 @@
     <script type="text/javascript" src="{{ static('js/slick.js') }}"></script>
     <script type="text/javascript" src="{{ static('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ static('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ static('js/bentobox.dist.js') }}"></script>
+
+{% block initScripts %}
+{% endblock %}
 </body>
 
 </html>

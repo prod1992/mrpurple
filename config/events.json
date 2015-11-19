@@ -1,0 +1,17 @@
+{
+    "name": "Events",
+    "fields": {
+        "heading": {
+            "title": "Top Image & Title",
+            "type": "section",
+            "items": {
+                "featured_image": "image",
+                "title": "text",
+                "additional_information": "file"
+            },
+        }
+    },
+    "wireframe": [
+        "section-heading",
+    ]
+}

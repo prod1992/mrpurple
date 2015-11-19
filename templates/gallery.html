@@ -7,28 +7,10 @@
                     <img src="{{ image }}" class="img-responsive" />
                 </div>
         {% endfor %}
-       
-    
     </div>
-    <div class="controls clearfix">
-    </div>
+
 </div>
-
 <script type="text/javascript">
-    
-    $('.gallery-slider').slick({
-        arrows: true,
-        focusOnSelect: false,
-        speed: 700,
-        appendArrows: $('.controls'),
-        variableWidth: true,
-        lazyLoad: 'ondemand',
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-        
-        
-    });
-
+	$('.gallery-slider').slick(galSliderOptions);
 </script>
 {% endblock %}

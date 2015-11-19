@@ -2019,7 +2019,7 @@
                 if (_.options.centerMode === true) {
                     infiniteCount = _.options.slidesToShow + 1;
                 } else {
-                    infiniteCount = _.options.slidesToShow;
+                    infiniteCount = _.options.slidesToShow + 2;
                 }
 
                 for (i = _.slideCount; i > (_.slideCount -
@@ -2028,12 +2028,25 @@
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
                         .attr('data-slick-index', slideIndex - _.slideCount)
                         .prependTo(_.$slideTrack).addClass('slick-cloned');
+                        // $(_.$slides[slideIndex + 1]).clone(true).attr('id', '')
+                        // .attr('data-slick-index', slideIndex - _.slideCount)
+                        // .prependTo(_.$slideTrack).addClass('slick-cloned');
+                        // $(_.$slides[slideIndex + 2]).clone(true).attr('id', '')
+                        // .attr('data-slick-index', slideIndex - _.slideCount)
+                        // .prependTo(_.$slideTrack).addClass('slick-cloned');
                 }
                 for (i = 0; i < infiniteCount; i += 1) {
                     slideIndex = i;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
                         .attr('data-slick-index', slideIndex + _.slideCount)
                         .appendTo(_.$slideTrack).addClass('slick-cloned');
+                        // $(_.$slides[slideIndex + 1]).clone(true).attr('id', '')
+                        // .attr('data-slick-index', slideIndex + _.slideCount)
+                        // .appendTo(_.$slideTrack).addClass('slick-cloned');
+                        // $(_.$slides[slideIndex + 2]).clone(true).attr('id', '')
+                        // .attr('data-slick-index', slideIndex + _.slideCount)
+                        // .appendTo(_.$slideTrack).addClass('slick-cloned');
+
                 }
                 _.$slideTrack.find('.slick-cloned').find('[id]').each(function() {
                     $(this).attr('id', '');

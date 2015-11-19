@@ -1,0 +1,6 @@
+{
+  "engine": "location",
+  "fields": { 
+  	"custom_map": "image" 
+  }
+}

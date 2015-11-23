@@ -1,4 +1,27 @@
 
+
+
+
+
+
+
+
+
+
+var htmlOriginal = $.fn.html;
+$.fn.html = function(html,callback){
+  // run the old `.html()` function with the first parameter
+  var ret = htmlOriginal.apply(this, arguments);
+  // run the callback (if it is defined)
+  if(typeof callback == "function"){
+    callback();
+  }
+  // make sure chaining is not broken
+  return ret;
+}
+
+
+
 var galSliderOptions = {
     accessibility: false,
     centerPadding: "200px",
@@ -70,6 +93,14 @@ function detectDirection(a) {
 
 
 
+
+$(window).load(function() {
+    setTimeout(function() {
+        $('.loader').removeClass('active');   
+    }, 500);
+    
+});
+
 $(window).scroll(function() {
     //just a test with scrolltop
 
@@ -118,6 +149,7 @@ $(window).scroll(function() {
 
 
 $(document).ready(function() {
+    $.validate();
     $('.home-slider').slick(homeSliderOptions);
 
     $("a.book-btn, li.book-table-mob a").click(function(e) {
@@ -328,17 +360,29 @@ $(document).ready(function() {
                         var response = $(data).filter('.page-content').html();
 
                         $('.page-content').html('');
-                        $('.page-content').html(response);
+                        $('.page-content').html(response, function() {
+                            setTimeout(function() {
+                                $('.gallery-slider').slick(galSliderOptions);
+                            }, 500);
+                            
+                        });
                         $('.page-title').html(thisText);
+                        if (thisText == 'events') {
+                            $.validate();
+                        }
 
 
                     }
                 });
+                
                 setTimeout(function() {
                     $('.page-content').fadeIn(1000);
-                    $('.gallery-slider').slick(galSliderOptions);
+                        
                 }, 400);
             });
         }
     });
 });
+
+
+$.validate();

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="loader text-center">
+    <div class="loader text-center active">
         <img src="{{ static('images/loading-screen.jpg') }}" />
     </div>
     <!-- header -->
@@ -75,7 +75,7 @@
                     {{ boxes.locations.by_slug['main-location'].address }}
                 </a>
                 <br>
-                <a class="phone" href="tel:{{ boxes.locations.by_slug['main-location'].phone_number }}">{{ boxes.locations.by_slug['main-location'].phone_number }}</a> | <a href="#">info@mrpurlenyc.com</a> |
+                <a class="phone" href="tel:{{ boxes.locations.by_slug['main-location'].phone_number }}">{{ boxes.locations.by_slug['main-location'].phone_number }}</a> | <a href="mailto:info@mrpurplenyc.com">info@mrpurlenyc.com</a> |
                  <a class="fb" target="_blank" href="{{ account.services.facebook.url }}">facebook</a> | <a href="{{ account.services.instagram.url }}" target="_blank" class="insta">
                 instagram </a><br>
                 {{ boxes.locations.by_slug['main-location'].hours}}
@@ -105,6 +105,7 @@
 </script>
     <script type="text/javascript" src="{{ static('js/slick.js') }}"></script>
     <script type="text/javascript" src="{{ static('js/bootstrap.min.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
     <script type="text/javascript" src="{{ static('js/main.js') }}"></script>
     <script type="text/javascript" src="{{ static('js/bentobox.dist.js') }}"></script>
 

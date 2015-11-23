@@ -824,13 +824,14 @@ footer .gerber-logo {
 }
 
 .page-content .gallery .gallery-slider .gal-slide {
-    margin-right: 20px;
+    margin: 0px 10px;
     outline: 0
 }
 
-.page-content .gallery .gallery-slider .gal-slide img {
-    max-width: auto;
+.page-content .gallery .gallery-slider .gal-slide {
+    max-width: initial;
     height: 650px;
+    width: 100%;
 }
 
 .page-content .events .banner img {
@@ -951,7 +952,7 @@ div.press-image {
     left: 0;
     right: 0;
     text-align: center;
-    background-color: #fff;
+    background: rgba(255,255,255,0.9);
 }
 
 .press .this-caption a {

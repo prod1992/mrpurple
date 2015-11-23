@@ -1,39 +1,41 @@
 
 var galSliderOptions = {
     accessibility: false,
-    infinite: true,
-    arrows: true,
-    dots: false,
-    centerMode: true,
-    variableWidth: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-    // responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         arrows: false,
-    //         centerMode: true,
-    //         centerPadding: '40px',
-    //       }
-    //     },
-    // ]
-};
-
-var homeSliderOptions = {
-    accessibility: false,
+    centerPadding: "200px",
     infinite: true,
     arrows: true,
     dots: false,
     centerMode: true,
     // variableWidth: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            centerMode: false
+          }
+        },
+    ]
+};
+
+var homeSliderOptions = {
+    accessibility: false,
+    centerPadding: "200px",
+    infinite: true,
+    arrows: true,
+    dots: false,
+    centerMode: true,
+    // variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false
           }
         },
     ]

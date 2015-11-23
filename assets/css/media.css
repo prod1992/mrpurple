@@ -1,12 +1,6 @@
         /* Large Devices, Wide Screens */
 
         @media only screen and (max-width: 1200px) {
-            .home-slider .slide {
-                min-height: 600px;
-            }
-            .page-content .gallery .gallery-slider .gal-slide img {
-                height: 600px;
-            }
             .one-slot img {
                 width: 260px;
                 height: 290px;
@@ -35,10 +29,6 @@
                 width: 100%;
                 border: none;
             }
-            .page-content .gallery .gallery-slider .gal-slide img {
-               
-                height: calc(100vh - 193px );
-            }
             .press img {
                 margin: 0 auto;
             }
@@ -52,7 +42,7 @@
         }
         /* Small Devices, Tablets */
 
-        @media only screen and (max-width: 769px) {
+        @media only screen and (max-width: 767px) {
             .banner.background-image {
                 display: none;
             }
@@ -68,10 +58,10 @@
                 right: 20px;
             }
             .page-content {
-                padding-top: 96px;
+                padding-top: 70px;
             }
             header {
-                padding: 37px 0 37px;
+                padding: 20px 0 20px;
             }
             header .book-btn {
                 display: none;
@@ -86,22 +76,25 @@
                 padding-top: 130px;
             }
             nav ul li a {
-                font-size: 25px;
+                font-size: 23px;
                 letter-spacing: 0.1em;
-                line-height: 45px;
+                line-height: 40px;
             }
             .page-content .menus .container .box-center.big-box {
                 padding: 50px 35px;
             }
             .home-slider .slide {
                 min-height: 300px;
-                height: calc(100vh - 309px);
+                height: 65vh;
+            }
+            .page-content .gallery .gallery-slider .gal-slide {
+               height: 65vh;  
             }
             .home-slider .slick-prev {
-                left: 30px;
+                left: 10px;
             }
             .home-slider .slick-next {
-                right: 30px;
+                right: 10px;
             }
             .about-content p {
                 font-size: 24px;
@@ -124,6 +117,15 @@
             }
             .loader a {
                 font-size: 25px;
+            }
+            .home-slider .slide {
+                margin: 0;
+            }
+            .page-content .gallery .gallery-slider .gal-slide {
+                margin: 0;
+            }
+            .press .this-caption {
+                padding: 20px 25%;
             }
         }
         /* Extra Small Devices, Phones */
@@ -154,20 +156,24 @@
         @media only screen and (min-width: 480px) {}
         /* Small Devices, Tablets */
 
-        @media only screen and (min-width: 769px) {}
-        /* Medium Devices, Desktops */
-
-        @media only screen and (min-width: 992px) {}
-        /* Large Devices, Wide Screens */
-
-        @media only screen and (min-width: 1200px) {
-            .home-slider .slide {
+        @media only screen and (min-width: 767px) {
+             .home-slider .slide {
                 height: calc(100vh - 191px);
                 width: 500px;
             }
-            .page-content .gallery .gallery-slider .gal-slide img {
+            .page-content .gallery .gallery-slider .gal-slide {
                height: calc(100vh - 191px);  
             }
+        }
+        /* Medium Devices, Desktops */
+
+        @media only screen and (min-width: 992px) {
+           
+        }
+        /* Large Devices, Wide Screens */
+
+        @media only screen and (min-width: 1200px) {
+            
         }
 
 
